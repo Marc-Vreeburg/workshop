@@ -1,0 +1,2 @@
+Download Python versie 3.10.7 van https://www.python.org/downloads/
+Download Microsoft Visual Studio Code versie 1.85.0 van https://code.visualstudio.com/download

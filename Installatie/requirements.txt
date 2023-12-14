@@ -1,0 +1,10 @@
+chromadb==0.4.18
+openai==1.3.8
+langchain==0.0.348
+huggingface-hub==0.16.4
+pypdf==3.17.2
+openpyxl==3.0.10
+docx2txt==0.8
+unstructured[all-docs]==0.11.2
+sentence-transformers==2.2.2
+streamlit==1.29.0
