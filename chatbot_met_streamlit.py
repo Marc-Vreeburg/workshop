@@ -16,10 +16,10 @@ from langchain.chat_models import ChatOpenAI
 from huggingface_hub import hf_hub_download, login
 
 # maak op uw harde schijf een mappenstructuur aan met de volgende mappen:
-CURRENT_WORKING_DIRECTORY = os.path.join('d:', os.sep, 'Python', 'workshop-main') # NB gebruik GEEN mapnamen met spaties want dat resulteert in een onjuist pad en een foutmelding!!!
-DOCUMENTEN_FOLDER_NAME = os.path.join(CURRENT_WORKING_DIRECTORY, 'documenten')
-EMBEDDINGS_FOLDER_NAME = os.path.join(CURRENT_WORKING_DIRECTORY, 'embeddingmodel')
-VECTORDB_FOLDER_NAME = os.path.join(CURRENT_WORKING_DIRECTORY, 'vectordb')
+CURRENT_WORKING_DIRECTORY = os.getcwd() # NB gebruik GEEN mapnamen met spaties want dat resulteert in een onjuist pad en een foutmelding!!!
+DOCUMENTEN_FOLDER_NAME = os.path.join(CURRENT_WORKING_DIRECTORY, 'documenten') # NB gebruik GEEN mapnamen met spaties want dat resulteert in een onjuist pad en een foutmelding!!!
+EMBEDDINGS_FOLDER_NAME = os.path.join(CURRENT_WORKING_DIRECTORY, 'embeddingmodel') # NB gebruik GEEN mapnamen met spaties want dat resulteert in een onjuist pad en een foutmelding!!!
+VECTORDB_FOLDER_NAME = os.path.join(CURRENT_WORKING_DIRECTORY, 'vectordb') # NB gebruik GEEN mapnamen met spaties want dat resulteert in een onjuist pad en een foutmelding!!!
 #print(DOCUMENTEN_FOLDER_NAME)
 #print(EMBEDDINGS_FOLDER_NAME)
 #print(VECTORDB_FOLDER_NAME)
@@ -50,7 +50,7 @@ def definieer_het_embedding_model():
 def opslaan_documenten():
     # lees de documenten in de map 'DOCUMENTEN_FOLDER_NAME' in en knip deze op in tekstfragmenten ('chunks') zodat ze door de llm voor de tekst interface kunnen worden gebruikt
     for file in os.listdir(DOCUMENTEN_FOLDER_NAME):
-        os.rename(os.path.join(DOCUMENTEN_FOLDER_NAME, file), os.path.join(DOCUMENTEN_FOLDER_NAME, file).replace(' ', '_').lower())
+        os.rename(os.path.join(DOCUMENTEN_FOLDER_NAME, file), os.path.join(DOCUMENTEN_FOLDER_NAME, file).replace(' ', '_').lower()) # NB gebruik GEEN mapnamen met spaties want dat resulteert in een onjuist pad en een foutmelding!!!
     loaders = {
             ".pdf": PyPDFLoader,
             ".csv": CSVLoader,
