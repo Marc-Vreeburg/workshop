@@ -1,5 +1,16 @@
-# installeer eerst de benodigde softwarebibliotheken
-# pip3 install requirements.txt
+# run deze code eenmalig om de benodigde software bibliotheken ('modules') te installeren
+%pip install chromadb==0.4.18
+%pip install openai==1.3.8
+%pip install langchain==0.0.348
+%pip install huggingface-hub==0.16.4
+%pip install pypdf==3.17.2
+%pip install openpyxl==3.0.10
+%pip install docx2txt==0.8
+%pip install unstructured[all-docs]==0.11.2
+%pip install sentence-transformers==2.2.2
+%pip install streamlit==1.29.0
+
+# importeer de benodigde softwarebibliotheken ('modules')
 import os
 import streamlit as st
 from langchain.document_loaders.pdf import PyPDFLoader
